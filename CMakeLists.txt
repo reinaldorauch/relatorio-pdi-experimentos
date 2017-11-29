@@ -1,0 +1,8 @@
+cmake_minimum_required(VERSION 2.8)
+set(EXECUTABLE_OUTPUT_PATH "./bin/")
+project (relatorio-pdi-experimentos)
+find_package( OpenCV REQUIRED )
+add_executable( escala-cinza ./src/escala_cinza.cpp )
+target_link_libraries( escala-cinza ${OpenCV_LIBS} )
+add_executable( segmentacao ./src/segmentacao.cpp )
+target_link_libraries( segmentacao ${OpenCV_LIBS} )
